@@ -1,0 +1,1 @@
+export { PaintCans } from './PaintCans';
