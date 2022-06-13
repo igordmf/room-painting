@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# DIGITAL REPUBLIC CODE CHALLENGE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## O que foi desenvolvido
 
-## Available Scripts
+Uma aplicação web que ajuda o usuário a calcular a quantidade de tinta necessária para pintar uma sala.
+A sala é composta de 4 paredes e permite que o usuário escolha qual a medida de cada parede e quantas janelas e portas possuem cada parede.
+Com base na quantidade necessária o programa aponta tamanhos de lata de tinta que o usuário deve comprar, sempre priorizando as latas maiores. Ex: se o usuário precisa de 19 litros, ele deve sugerir 1 lata de 18L + 2 latas de 0,5L
 
-In the project directory, you can run:
+### Regras de negócio
 
-### `npm start`
+1. Nenhuma parede pode ter menos de 1 metro quadrado nem mais de 50 metros quadrados, mas podem possuir alturas e larguras diferentes
+2. O total de área das portas e janelas deve ser no máximo 50% da área de parede
+3. A altura de paredes com porta deve ser, no mínimo, 30 centímetros maior que a altura da porta
+4. Cada janela possui as medidas: 2,00 x 1,20 mtos
+5. Cada porta possui as medidas: 0,80 x 1,90
+6. Cada litro de tinta é capaz de pintar 5 metros quadrados
+7. Não considerar teto nem piso.
+8. As variações de tamanho das latas de tinta são:
+   - 0,5 L
+   - 2,5 L
+   - 3,6 L
+   - 18 L
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠 Tecnologias
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="20" height="16" /> ReactJS
 
-### `npm test`
+<img src="https://www.typescriptlang.org/favicon-32x32.png" width="20" height="16" /> TypeScript
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" width="16" height="16" /> Styled-components
 
-### `npm run build`
+<img src="https://testing-library.com/img/octopus-64x64.png" width="20" height="16" /> React Testing Library
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ▶️ Inicializando o projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ### **Pré-requisitos**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - **Node.js**
+  - Gerenciador de pacotes **npm**
 
-### `npm run eject`
+```sh
+  # Abra pasta do projeto
+  $ cd lemonLibrary
+  # Instale as dependencias
+  $ npm install
+  # Rode a aplicação
+  $ npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Abra o navegador
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[http://localhost:3000](http://localhost:3000) para ver no browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## ▶️ Rodando os tests
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+  # Abra pasta do projeto
+  $ cd room-painting
+  # Rode os testes
+  $ npm test
+```
