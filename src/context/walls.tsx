@@ -32,7 +32,7 @@ interface IWallsContextData {
   setWalls: (walls: IWalls) => void;
 }
 
-export const DEFAULT_VALUE = {
+export const WALLS_DEFAULT_VALUE = {
   walls: {
     firstWall: {
       height: 0,
@@ -54,10 +54,10 @@ export const DEFAULT_VALUE = {
   setWalls: () => {},
 }
 
-const WallsContext = createContext<IWallsContextData>(DEFAULT_VALUE);
+const WallsContext = createContext<IWallsContextData>(WALLS_DEFAULT_VALUE);
 
 export const WallsProvider: React.FC = ({ children }) => {
-  const [walls, setWalls] = useState<IWalls>(DEFAULT_VALUE.walls);
+  const [walls, setWalls] = useState<IWalls>(WALLS_DEFAULT_VALUE.walls);
 
   return (
     <WallsContext.Provider

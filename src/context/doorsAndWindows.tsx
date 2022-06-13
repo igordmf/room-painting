@@ -24,7 +24,7 @@ interface IDoorsAndWindowsContextData {
   setDoorsAndWindows: (doorsAndWindows: IDoorsAndWindows) => void;
 }
 
-const DEFAULT_VALUE = {
+const WALLS_AND_DEFAULT_VALUE = {
   doorsAndWindows: {
     firstWall: {
       doors: 0,
@@ -46,10 +46,10 @@ const DEFAULT_VALUE = {
   setDoorsAndWindows: () => {},
 }
 
-const DoorsAndWindowsContext = createContext<IDoorsAndWindowsContextData>(DEFAULT_VALUE);
+const DoorsAndWindowsContext = createContext<IDoorsAndWindowsContextData>(WALLS_AND_DEFAULT_VALUE);
 
 export const DoorsAndWindowsProvider: React.FC = ({ children }) => {
-  const [doorsAndWindows, setDoorsAndWindows] = useState<IDoorsAndWindows>(DEFAULT_VALUE.doorsAndWindows);
+  const [doorsAndWindows, setDoorsAndWindows] = useState<IDoorsAndWindows>(WALLS_AND_DEFAULT_VALUE.doorsAndWindows);
 
   return (
     <DoorsAndWindowsContext.Provider
