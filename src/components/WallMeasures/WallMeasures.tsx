@@ -33,13 +33,13 @@ export const WallMeasures = () => {
   )
 }
 
-type IWallContainerProps = {
+export type IWallContainerProps = {
   handleMeasuresChange: (event: { target: HTMLInputElement; }) => void;
   wallName: WallKeys;
   walls: IWalls;
 }
 
-const WallContainer = ({handleMeasuresChange, walls, wallName}: IWallContainerProps) => {
+export const WallContainer = ({handleMeasuresChange, wallName, walls}: IWallContainerProps) => {
   return (
     <Container>
       <p>Dimensões da {WALL_NAMES_TEXT[wallName]} parede em metros</p>
