@@ -1,1 +1,1 @@
-export { DimensionInput } from './DimensionInput';
+export * from './DimensionInput';

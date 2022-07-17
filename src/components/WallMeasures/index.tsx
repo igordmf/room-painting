@@ -1,1 +1,1 @@
-export { WallMeasures } from './WallMeasures';
+export * from './WallMeasures';

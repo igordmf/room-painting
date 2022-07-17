@@ -1,6 +1,6 @@
 import { Label } from './DimensionInput.styles'
 
-type DimensionInputProps = {
+export type DimensionInputProps = {
   handleMeasuresChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   label: string;
   name: string;

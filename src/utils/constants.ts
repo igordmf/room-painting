@@ -1,5 +1,5 @@
 export const MIN_WALL_AREA = 1;
-export const MAX_WALL_AREA = 15;
+export const MAX_WALL_AREA = 50;
 
 export const MAX_DOOR_AND_WINDOWS_PERCENTUAL_AREA = 0.5;
 
